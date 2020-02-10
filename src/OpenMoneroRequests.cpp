@@ -1479,8 +1479,7 @@ OpenMoneroRequests::import_recent_wallet_request(
     // wallet multiple times in a row.
     updated_acc.scanned_block_height
             = updated_acc.scanned_block_height - no_blocks_to_import;
-    updated_acc.start_height
-            = updated_acc.scanned_block_height - no_blocks_to_import;
+    updated_acc.start_height = updated_acc.scanned_block_height;
 
     if (!xmr_accounts->update(acc, updated_acc))
     {
